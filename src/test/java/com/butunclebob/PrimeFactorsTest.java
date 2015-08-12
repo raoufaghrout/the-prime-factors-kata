@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.butunclebob.PrimeFactors.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
@@ -12,10 +13,20 @@ public class PrimeFactorsTest {
 
     @Test
     public void shouldGenerateOne() {
-        assertThat(PrimeFactors.generate(1), is(list()));
+        assertThat(generate(1), is(list()));
     }
 
-    private List<Integer> list() {
-        return new ArrayList<Integer>();
+    @Test
+    public void shouldGenerateTwo() {
+        assertThat(generate(2), is(list(2)));
+    }
+
+    private List<Integer> list(int... ints) {
+        List<Integer> list = new ArrayList<Integer>();
+
+        for (int i : ints)
+            list.add(i);
+
+        return list;
     }
 }

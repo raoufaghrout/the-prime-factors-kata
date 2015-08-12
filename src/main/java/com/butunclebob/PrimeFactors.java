@@ -6,6 +6,11 @@ import java.util.List;
 public class PrimeFactors {
 
     public static List<Integer> generate(int n) {
-        return new ArrayList<Integer>();
+        List<Integer> primes = new ArrayList<Integer>();
+
+        if (n > 1)
+            primes.add(2);
+
+        return primes;
     }
 }
