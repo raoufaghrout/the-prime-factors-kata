@@ -26,6 +26,11 @@ public class PrimeFactorsTest {
         assertThat(generate(3), is(list(3)));
     }
 
+    @Test
+    public void shouldGenerateFour() {
+        assertThat(generate(4), is(list(2, 2)));
+    }
+
     private List<Integer> list(int... ints) {
         List<Integer> list = new ArrayList<Integer>();
 
