@@ -37,8 +37,13 @@ public class PrimeFactorsTest {
     }
 
     @Test
-    public void shouldGenerateFor8() {
+    public void shouldGenerateForEight() {
         assertThat(generate(8), is(list(2, 2, 2)));
+    }
+
+    @Test
+    public void shouldGenerateForNine() {
+        assertThat(generate(9), is(list(3, 3)));
     }
 
     private List<Integer> list(int... ints) {
