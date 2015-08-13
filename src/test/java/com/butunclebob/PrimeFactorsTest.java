@@ -12,23 +12,28 @@ import static org.hamcrest.core.Is.is;
 public class PrimeFactorsTest {
 
     @Test
-    public void shouldGenerateOne() {
+    public void shouldGenerateForOne() {
         assertThat(generate(1), is(list()));
     }
 
     @Test
-    public void shouldGenerateTwo() {
+    public void shouldGenerateForTwo() {
         assertThat(generate(2), is(list(2)));
     }
 
     @Test
-    public void shouldGenerateThree() {
+    public void shouldGenerateForThree() {
         assertThat(generate(3), is(list(3)));
     }
 
     @Test
-    public void shouldGenerateFour() {
+    public void shouldGenerateForFour() {
         assertThat(generate(4), is(list(2, 2)));
+    }
+
+    @Test
+    public void shouldGenerateForSix() {
+        assertThat(generate(6), is(list(2, 3)));
     }
 
     private List<Integer> list(int... ints) {
